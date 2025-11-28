@@ -4,6 +4,8 @@
   import path from 'path';
 
   export default defineConfig({
+    // Base path for GitHub Pages (project pages). Update if your repo name differs.
+    base: '/Landing-Page-for-Sloth-Foundation/',
     plugins: [react()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
@@ -51,7 +53,8 @@
     },
     build: {
       target: 'esnext',
-      outDir: 'build',
+      // Output to `docs/` so GitHub Pages can serve from the repository `docs` folder
+      outDir: 'docs',
     },
     server: {
       port: 3000,
